@@ -1,9 +1,11 @@
 import React from "react";
 import "./Navbar.css";
+import SignUp from "../Sign_Up/SignUp";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     function handleClick() {
-        
+
     }
     return (
         <div>
@@ -45,10 +47,12 @@ const Navbar = () => {
                 </div>
 
                 {/* Unordered list for navigation links with 'active' class */}
+
                 <ul className="nav__links active">
                     {/* List item for the 'Home' link */}
                     <li className="link">
-                        <a href="../Landing_Page/LandingPage.html">Home</a>
+                        <Link to="../Landing_Page/LandingPage.js">Home</Link>
+                        {/* <a href="../Landing_Page/LandingPage.html">Home</a> */}
                     </li>
                     {/* List item for the 'Appointments' link */}
                     <li className="link">
@@ -56,15 +60,17 @@ const Navbar = () => {
                     </li>
                     {/* List item for the 'Sign Up' link with a button */}
                     <li className="link">
-                        <a href="../Sign_Up//Sign_Up.html">
+                        <Link to="/signup"><button className="btn1">Sign Up</button></Link>
+                        {/* <a href="../Sign_Up/SignUp.html">
                             <button className="btn1">Sign Up</button>
-                        </a>
+                        </a> */}
                     </li>
                     {/* List item for the 'Login' link with a button */}
                     <li className="link">
-                        <a href="../Login/Login.html">
+                        <Link to="/login"><button className="btn1">Login</button></Link>
+                        {/* <a href="../Login/Login.html">
                             <button className="btn1">Login</button>
-                        </a>
+                        </a> */}
                     </li>
                 </ul>
             </nav>
