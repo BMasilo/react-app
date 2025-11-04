@@ -1,6 +1,5 @@
 import React from "react";
 import "./Navbar.css";
-import SignUp from "../Sign_Up/SignUp";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -13,7 +12,7 @@ const Navbar = () => {
                 {/* Navigation logo section */}
                 <div className="nav__logo">
                     {/* Link to the home page */}
-                    <a href="/">
+                    <Link to="/">
                         StayHealthy
                         {/* Insert an SVG icon of a doctor with a stethoscope */}
                         <svg
@@ -35,7 +34,7 @@ const Navbar = () => {
                                 </g>
                             </g>
                         </svg>
-                    </a>
+                    </Link>
                     {/* A span element for styling purposes */}
                     <span>.</span>
                 </div>
@@ -51,23 +50,23 @@ const Navbar = () => {
                 <ul className="nav__links active">
                     {/* List item for the 'Home' link */}
                     <li className="link">
-                        <Link to="../Landing_Page/LandingPage.js">Home</Link>
+                        <Link to="/LandingPage">Home</Link>
                         {/* <a href="../Landing_Page/LandingPage.html">Home</a> */}
                     </li>
                     {/* List item for the 'Appointments' link */}
                     <li className="link">
-                        <a href="#">Appointments</a>
+                        <Link to="/InstantConsultationBooking">Appointments</Link>
                     </li>
                     {/* List item for the 'Sign Up' link with a button */}
                     <li className="link">
-                        <Link to="/signup"><button className="btn1">Sign Up</button></Link>
+                        <Link to="/SignUp"><button className="btn1">Sign Up</button></Link>
                         {/* <a href="../Sign_Up/SignUp.html">
                             <button className="btn1">Sign Up</button>
                         </a> */}
                     </li>
                     {/* List item for the 'Login' link with a button */}
                     <li className="link">
-                        <Link to="/login"><button className="btn1">Login</button></Link>
+                        <Link to="/Login"><button className="btn1">Login</button></Link>
                         {/* <a href="../Login/Login.html">
                             <button className="btn1">Login</button>
                         </a> */}

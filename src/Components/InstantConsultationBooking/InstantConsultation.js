@@ -9,7 +9,6 @@ const InstantConsultation = () => {
     const [doctors, setDoctors] = useState([]);
     const [filteredDoctors, setFilteredDoctors] = useState([]);
     const [isSearched, setIsSearched] = useState(false);
-    
     const getDoctorsDetails = () => {
         fetch('https://api.npoint.io/9a5543d36f1460da2f63')
         .then(res => res.json())
@@ -19,7 +18,6 @@ const InstantConsultation = () => {
                 const filtered = data.filter(doctor => doctor.speciality.toLowerCase() === searchParams.get('speciality').toLowerCase());
 
                 setFilteredDoctors(filtered);
-                
                 setIsSearched(true);
                 window.reload()
             } else {
@@ -36,27 +34,23 @@ const InstantConsultation = () => {
             setFilteredDoctors([]);
             setIsSearched(false);
             } else {
-                
             const filtered = doctors.filter(
                 (doctor) =>
-                // 
                 doctor.speciality.toLowerCase().includes(searchText.toLowerCase())
-                
             );
-                
             setFilteredDoctors(filtered);
             setIsSearched(true);
             window.location.reload()
         }
     };
     const navigate = useNavigate();
-    useEffect(() => {
-        getDoctorsDetails();
-        // const authtoken = sessionStorage.getItem("auth-token");
-        // if (!authtoken) {
-        //     navigate("/login");
-        // }
-    }, [searchParams])
+    // useEffect(() => {
+    //     getDoctorsDetails();
+    //     const authtoken = sessionStorage.getItem("auth-token");
+    //     if (!authtoken) {
+    //         navigate("/login");
+    //     }
+    // }, [searchParams])
 
     return (
         <center>
@@ -82,4 +76,4 @@ const InstantConsultation = () => {
     )
 }
 
-export default InstantConsultation
+export default InstantConsultation;

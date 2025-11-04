@@ -1,4 +1,5 @@
 import React from "react"; // Importing the necessary modules from React library
+import { Link } from "react-router-dom"; // Importing Link component from react-router-dom for navigation
 
 import "./LandingPage.css"; // Importing the CSS styles for the Landing_Page component
 
@@ -8,12 +9,10 @@ const LandingPage = () => {
     <section className="hero-section"> {/* Creating a section with class name 'hero-section' */}
       <div>
         <div data-aos="fade-up" className="flex-hero"> {/* Creating a div with data-aos attribute and class name 'flex-hero' */}
-            
             <h1>
               Your Health<br/>
 
               <span className="text-gradient">
-                
                 Our Responsibility
               </span>
             </h1>
@@ -26,9 +25,9 @@ const LandingPage = () => {
             <h4>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque at quae ducimus. Suscipit omnis quibusdam non cum rem voluptatem!
             </h4>
-            <a href="#services"> {/* Creating a hyperlink to jump to the 'services' section */}
+            <Link to="#services"> {/* Creating a hyperlink to jump to the 'services' section */}
               <button class="button">Get Started</button> {/* Creating a button with class name 'button' */}
-            </a>
+            </Link>
         </div>
       </div>
     </section>
